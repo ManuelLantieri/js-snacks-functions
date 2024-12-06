@@ -9,7 +9,25 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
+const hello = (name) => {
+    const now = new Date ();
+    const currentHour = now.getHours();
+    let message = "";
 
+    if(currentHour <= 4) {
+        message = "Buona notte";
+    } else if (currentHour <= 13) {
+        message = "Buon giorno";
+    } else if (currentHour <= 17) {
+        message = "Buon pomeriggio";
+    }  else {
+        message = "Buona sera";
+    }
+
+    message = `${message} ${name}`;
+
+    return message;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
